@@ -57,6 +57,7 @@ func ErrorHandel(handel AppHandel) func(http.ResponseWriter, *http.Request) {
 		// catch all panic
 		defer func() {
 			if err := recover(); err != nil {
+				// TODO err to string 怎么转换
 				log.Printf("Panic: %v", err)
 				http.Error(writer, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 			}
@@ -72,7 +73,7 @@ func ErrorHandel(handel AppHandel) func(http.ResponseWriter, *http.Request) {
 			}
 			// handel sys error
 			switch {
-			case os.IsExist(e):
+			case os.IsNotExist(e):
 				httpCode = http.StatusNotFound
 			case os.IsPermission(e):
 				httpCode = http.StatusForbidden
