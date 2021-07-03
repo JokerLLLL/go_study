@@ -31,3 +31,6 @@ https://graphviz.org/download
 命令：  
 `go test -bench  . -cpuprofile cpu.out`  
 `go tool pprof cpu.out`  
+
+## go doc
+`go doc + `类型  查看
