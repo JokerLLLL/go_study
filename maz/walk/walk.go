@@ -75,6 +75,8 @@ func Walk(mapInfo Map) Map {
 			if steps[nextPoint.i][nextPoint.j] > 0 {
 				continue
 			}
+
+			// TODO 优化去除PointStep这个组合类，可以这里提前在steps里标记下一个 current + 1
 			Queue = append(Queue, nextPoint)
 		}
 	}
