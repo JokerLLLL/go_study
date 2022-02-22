@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	m := walk.GetMap("./maz/map2.in")
+	m := walk.GetMap("./maz/map1.in")
 	successMap := walk.Walk(m)
 	walk.Show(m, successMap)
 }
