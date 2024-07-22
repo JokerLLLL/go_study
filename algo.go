@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/jokerl/go_study/algo"
 	"rsc.io/quote"
+	"time"
 )
 
 func main() {
@@ -13,6 +14,7 @@ func main() {
 	//pwwkew -> wke 3
 	// abc -> abc 3
 	// "" -> ""  0
+	time.Now()
 	algo.SearchLengthSonString("abcabcbb")
 	algo.SearchLengthSonString("bbbbb")
 	algo.SearchLengthSonString("pwwkew")

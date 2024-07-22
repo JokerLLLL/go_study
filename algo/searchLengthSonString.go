@@ -1,5 +1,7 @@
 package algo
 
+import "fmt"
+
 func SearchLengthSonString(s string) int {
 	now := 0
 	max := 0
@@ -15,6 +17,6 @@ func SearchLengthSonString(s string) int {
 		}
 		mapLocationLast[v] = i
 	}
-	// fmt.Println(max)
+	fmt.Println(max)
 	return max
 }

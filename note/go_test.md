@@ -92,4 +92,15 @@ docker run -d \
 -- 压测工具采用：wrk
 https://github.com/wg/wrk
 
+./wrk -c1000 -t12 -d10s http://10.2.3.145:9090/info
+./wrk -c1000 -t12 -d10s --script=post.lua  'https://pii-stress.test.uco.com/decryptPlatform?timeStamp=1&appKey=1&v=1.0&sign=1'
+./wrk -c1000 -t12 -d10s --script=post.lua  'https://pii-stress.test.uco.com/decryptPlatform?timeStamp=1&appKey=1&v=1.0&sign=1'
+
 ```
+
+
+### 本地调试
+
+sign设置成TRUE
+
+go run crypticserver.go localDriver.go dummyDriver.go vaultDriver.go platformDriver.go main.go --cacheSize=100001 --logMode=15 --logPath="D:\tmp"

@@ -22,6 +22,6 @@ func main()  {
 	jsonAll := json.GetPath("data", "decrypt_infos")
 	for i:=range jsonAll.MustArray(){
 		newJ := jsonAll.GetIndex(i)
-		fmt.Println(newJ)
+		fmt.Println(newJ.Map())
 	}
 }
